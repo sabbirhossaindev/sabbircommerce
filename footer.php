@@ -3,41 +3,7 @@
     <div class="">
         <!-- Footer -->
         <footer class="text-center text-lg-start text-dark" style="background-color: #ECEFF1">
-            <!-- Section: Social media -->
-            <section class="d-flex justify-content-between p-4 text-white" style="background-color: #5768f5">
-                <!-- Left -->
-                <div class="me-5">
-                    <h3>Social Networks </h3>
-                </div>
-                <!-- Left -->
-
-                <!-- Right -->
-                <div>
-                    <a href="" class="text-white me-4">
-                        <i class="mdi mdi-facebook"></i>
-                    </a>
-                    <a href="" class="text-white me-4">
-                        <i class="mdi mdi-twitter"></i>
-                    </a>
-                    <a href="" class="text-white me-4">
-                        <i class="mdi mdi-google"></i>
-                    </a>
-                    <a href="" class="text-white me-4">
-                        <i class="mdi mdi-instagram"></i>
-                    </a>
-                    <a href="" class="text-white me-4">
-                        <i class="mdi mdi-linkedin"></i>
-                    </a>
-                    <a href="" class="text-white me-4">
-                        <i class="mdi mdi-github"></i>
-                    </a>
-                </div>
-                <!-- Right -->
-            </section>
-            <!-- Section: Social media -->
-
-            <!-- Section: Links  -->
-            <section class="">
+            <section class="p-3">
                 <div class="container text-center text-md-start mt-5">
                     <!-- Grid row -->
                     <div class="row mt-3">
@@ -56,22 +22,35 @@
                         <!-- Grid column -->
 
                         <!-- Grid column -->
-                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-3">
                             <!-- Links -->
-                            <h6 class="text-uppercase fw-bold">Products</h6>
+                            <h6 class="text-uppercase fw-bold">Social</h6>
                             <hr class="mb-4 mt-0 d-inline-block mx-auto"
                                 style="width: 60px; background-color: #7c4dff; height: 2px" />
                             <p>
-                                <a href="#!" class="text-dark">MDBootstrap</a>
+                                <a href="https://www.facebook.com/profile.php?id=100066520511940" class="text-white">
+                                    <i class="mdi mdi-facebook" style="background-color: #5768f5"></i>
+                                </a>
                             </p>
                             <p>
-                                <a href="#!" class="text-dark">MDWordPress</a>
+                                <a href="https://github.com/sabbirvai" class="text-white">
+                                    <i class="mdi mdi-gitlab" style="background-color: black"></i>
+                                </a>
                             </p>
                             <p>
-                                <a href="#!" class="text-dark">BrandFlow</a>
+                                <a href="https://www.linkedin.com/in/md-sabbir-hossain-18300b244/" class="text-white">
+                                    <i class="mdi mdi-linkedin" style="background-color: #5768f5"></i>
+                                </a>
                             </p>
                             <p>
-                                <a href="#!" class="text-dark">Bootstrap Angular</a>
+                                <a href="https://medium.com/@sabbirhossain_37022" class="text-white">
+                                    <i class="mdi mdi-post" style="background-color: black"></i>
+                                </a>
+                            </p>
+                            <p>
+                                <a href="https://www.instagram.com/dev__sabbir/" class="text-white">
+                                    <i class="mdi mdi-instagram" style="background-color: brown"></i>
+                                </a>
                             </p>
                         </div>
                         <!-- Grid column -->
