@@ -10,6 +10,24 @@
 include('header.php');
 ?>
 
+<style>
+.btn-edit {
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.btn-delete {
+    cursor: pointer;
+    background-color: crimson;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    margin-left: 5px;
+}
+</style>
 
 <body>
     <div class="container-scroller">
@@ -34,21 +52,21 @@ include('header.php');
                     <div class="col-lg-12 grid-margin stretch-card">
                         <div class="card">
                             <div class="card-body">
-                                <h2 class="text-center text-primary"><i class="mdi mdi-account-details"></i> All
-                                    Users
+                                <h2 class="text-center"> All
+                                    Users <i class="mdi mdi-account-details text-primary"></i>
                                 </h2>
                                 <!-- <p class="card-description"> Add class <code>.table-bordered</code> </p> -->
                                 <table class="table table-bordered">
                                     <thead>
                                         <tr>
-                                            <th> STN <i class="mdi mdi-account-circle-outline"></i>
+                                            <th> STN <i class="mdi mdi-account-circle-outline text-danger"></i>
                                             </th>
-                                            <th> User Name <i class="mdi mdi-account"></i></th>
-                                            <th> Email <i class="mdi mdi-email-box"></i></th>
-                                            <th> Ceil <i class="mdi mdi-phone"></i></th>
-                                            <th> Birthday <i class="mdi mdi-calendar-today"></i></th>
-                                            <th> Address <i class="mdi mdi-map-marker"></i></th>
-                                            <th> Action <i class="mdi mdi-account"></i></th>
+                                            <th> User Name <i class="mdi mdi-account text-success"></i></th>
+                                            <th> Email <i class="mdi mdi-email-box text-warning"></i></th>
+                                            <th> Ceil <i class="mdi mdi-phone text-success"></i></th>
+                                            <th> Birthday <i class="mdi mdi-calendar-today text-danger"></i></th>
+                                            <th> Address <i class="mdi mdi-map-marker text-success"></i></th>
+                                            <th> Action <i class="mdi mdi-update text-danger"></i></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -76,8 +94,14 @@ include('header.php');
                                             <td> 01888559287 </td>
                                             <td> 24/07/2003 </td>
                                             <td> Dhaka </td>
-                                            <td> Edit <i class="mdi mdi-pencil"></i>|| Delete <i
-                                                    class="mdi mdi-delete-circle"></i>
+                                            <td>
+                                                <span class="btn-edit"> Edit <i class="mdi mdi-pencil text-light">
+                                                    </i>
+                                                </span>
+                                                <span class="btn-delete"> Delete <i
+                                                        class="mdi mdi-delete-circle text-danger text-light">
+                                                    </i>
+                                                </span>
                                             </td>
                                         </tr>
                                     </tbody>
