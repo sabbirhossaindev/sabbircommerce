@@ -19,6 +19,10 @@ include('header.php');
     border-radius: 4px;
 }
 
+a {
+    text-decoration: none;
+}
+
 .btn-delete {
     cursor: pointer;
     background-color: crimson;
@@ -78,32 +82,41 @@ include('header.php');
                                                 $sql = mysqli_query($link, $query);
                                                 // var_dump($sql); data check
                                                 if(mysqli_num_rows($sql)> 0){
+                                                    $serial = 1;
                                                     while($rows=mysqli_fetch_assoc($sql)){
-                                                        echo $rows['user_name']. "<br>";
-                                                    }
-                                                }
-                                                else{
-                                                    echo "Data nai";
-                                                }
-                                            }
-                                        ?>
+                                                        
+                                            ?>
                                         <tr>
-                                            <td> 1 </td>
-                                            <td> Sabbir Hossain </td>
-                                            <td>mdsabbir477470@gmail.com</td>
-                                            <td> 01888559287 </td>
-                                            <td> 24/07/2003 </td>
-                                            <td> Dhaka </td>
+                                            <td> <?php echo $serial++ ?></td>
+                                            <td> <?php echo $rows['user_name']; ?></td>
+                                            <td> <?php echo $rows['user_email']; ?></td>
+                                            <td> <?php echo $rows['user_ceil']; ?> </td>
+                                            <td> <?php echo $rows['user_birthday']; ?> </td>
+                                            <td> <?php echo $rows['user_address']; ?> </td>
                                             <td>
-                                                <span class="btn-edit"> Edit <i class="mdi mdi-pencil text-light">
-                                                    </i>
-                                                </span>
-                                                <span class="btn-delete"> Delete <i
-                                                        class="mdi mdi-delete-circle text-danger text-light">
-                                                    </i>
-                                                </span>
+                                                <a href="user-edit.php">
+                                                    <span class="btn-edit"> Edit <i class="mdi mdi-pencil text-light">
+                                                        </i>
+                                                    </span>
+                                                </a>
+                                                <a href="#">
+                                                    <span class="btn-delete"> Delete <i
+                                                            class="mdi mdi-delete-circle text-danger text-light">
+                                                        </i>
+                                                    </span>
+                                                </a>
                                             </td>
                                         </tr>
+                                        <?php
+
+                                            }
+                                                }
+                                                
+                                                else{
+                                                    echo "Data nai";
+                                                    }
+                                                }
+                                            ?>
                                     </tbody>
                                 </table>
                             </div>

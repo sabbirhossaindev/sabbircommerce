@@ -10,13 +10,13 @@
                         <!-- Grid column -->
                         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                             <!-- Content -->
-                            <h6 class="text-uppercase fw-bold">Company name</h6>
+                            <h6 class="text-uppercase fw-bold">Service</h6>
                             <hr class="mb-4 mt-0 d-inline-block mx-auto"
                                 style="width: 60px; background-color: #7c4dff; height: 2px" />
                             <p>
-                                Here you can use rows and columns to organize your footer
-                                content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                                elit.
+                                - Web Designer & Developer 🥰 <br>
+                                - PHP Laravel & DBMS Developer 💗 <br>
+                                - WordPress WIX & Shopify Developer🤙
                             </p>
                         </div>
                         <!-- Grid column -->
@@ -82,10 +82,10 @@
                             <h6 class="text-uppercase fw-bold">Contact</h6>
                             <hr class="mb-4 mt-0 d-inline-block mx-auto"
                                 style="width: 60px; background-color: #7c4dff; height: 2px" />
-                            <p><i class="mdi mdi-home mr-3"></i> New York, NY 10012, US</p>
-                            <p><i class="mdi mdi-email-outline mr-3"></i> info@example.com</p>
-                            <p><i class="mdi mdi-phone mr-3"></i> + 01 234 567 88</p>
-                            <p><i class="mdi mdi-printer mr-3"></i> + 01 234 567 89</p>
+                            <p><i class="mdi mdi-map-marker text-success"></i> Rangpur, Dhaka</p>
+                            <p><i class="mdi mdi-email-outline mr-1 text-warning"></i>mdsabbir477470@gmail.com</p>
+                            <p><i class="mdi mdi-phone mr-1 text-danger"></i> +880188855-9287</p>
+                            <p><i class="mdi mdi-printer mr-1 text-primary"></i> +880171922-8487</p>
                         </div>
                         <!-- Grid column -->
                     </div>
