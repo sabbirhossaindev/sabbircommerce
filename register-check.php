@@ -7,7 +7,7 @@ $ceil = $_POST['ceil'];
 $birthday = $_POST['birthday'];
 $address = $_POST['address'];
 $message = $_POST['message'];
-$link = mysqli_connect("localhost","root","","sabbircommerce");
+include('db-config.php');
 
 if($link == true){
 
