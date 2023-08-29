@@ -52,15 +52,15 @@ a {
                     <?php
                     include('mainbody-header.php');
                     ?>
-                    <!-- Page Title Header Ends-->
-                    <div class="col-lg-12 grid-margin stretch-card">
-                        <div class="card">
+                    <!-- Page Title Header Ends overflow-auto-->
+                    <div class="col-lg-12 grid-margin stretch-card overflow-auto">
+                        <div class=" card">
                             <div class="card-body">
-                                <h2 class="text-center"> All
-                                    Users <i class="mdi mdi-account-details text-primary"></i>
+                                <h2 class="text-center my-lg-1"><span class="text-primary"> All
+                                        Users</span> <i class="mdi mdi-account-details text-success"></i>
                                 </h2>
-                                <!-- <p class="card-description"> Add class <code>.table-bordered</code> </p> -->
-                                <table class="table table-bordered">
+
+                                <table class="table w-full">
                                     <thead>
                                         <tr>
                                             <th> STN <i class="mdi mdi-account-circle-outline text-danger"></i>
@@ -73,7 +73,7 @@ a {
                                             <th> Action <i class="mdi mdi-update text-danger"></i></th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody class="divide-y">
                                         <?php 
                                             include('db-config.php');
 
