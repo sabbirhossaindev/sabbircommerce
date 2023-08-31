@@ -59,7 +59,24 @@
             </div>
         </li>
 
+        <li class="nav-item">
+            <a class="nav-link" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <i class="menu-icon typcn typcn-coffee"></i>
+                <span class="menu-title">Brand </span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="all-brand.php">All Brand</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="add-new-brand.php">Add New Brand </a>
+                    </li>
 
+                </ul>
+            </div>
+        </li>
 
         <li class="nav-item">
             <a class="nav-link" href="pages/forms/basic_elements.html">
