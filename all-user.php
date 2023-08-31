@@ -129,8 +129,8 @@ a {
                 <?php
                 include('footer.php');
                 ?>
-
-                <?php
+            </div>
+            <?php
     }
     else{
         header("Location: login.php?msg= Don't try it. Please login!");

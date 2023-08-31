@@ -52,18 +52,6 @@ include('header.php');
                                             placeholder="Password">
                                     </div>
                                     <div class="form-group">
-                                        <label>File upload</label>
-                                        <input type="file" name="img[]" class="file-upload-default">
-                                        <div class="input-group col-xs-12">
-                                            <input type="text" class="form-control file-upload-info" disabled
-                                                placeholder="Upload Image">
-                                            <span class="input-group-append">
-                                                <button class="file-upload-browse btn btn-info"
-                                                    type="button">Upload</button>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
                                         <label for="exampleInputCity1">City</label>
                                         <input type="text" class="form-control" id="exampleInputCity1"
                                             placeholder="Location">
@@ -84,8 +72,8 @@ include('header.php');
                 <?php
                 include('footer.php');
                 ?>
-
-                <?php
+            </div>
+            <?php
     }
     else{
         header("Location: login.php?msg= Don't try it. Please login!");

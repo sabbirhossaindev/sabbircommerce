@@ -30,41 +30,34 @@ include('header.php');
                     <?php
                     include('mainbody-header.php');
                     ?>
-                    <!-- Page Title Header Ends-->
+
                     <div class="col-md-12 grid-margin stretch-card">
                         <div class="card">
                             <div class="card-body">
-                                <h2 class="text-center"><span class="text-primary">Add New Category</span> <i
-                                        class="mdi mdi-account-plus text-success"></i></h2>
-                                <form class="forms-sample" action="save-category.php" method="POST"
-                                    enctype="multipart/form-data">
+                                <h2 class="text-center text-primary">Add New Brand</h2>
+                                <form class="forms-sample">
                                     <div class="form-group">
-                                        <label for="exampleInputName1">Name</label>
-                                        <input type="text" class="form-control" name="name" id="exampleInputName1"
+                                        <label for="exampleInputName1">Brand Name</label>
+                                        <input type="text" class="form-control" id="exampleInputName1"
                                             placeholder="Name">
                                     </div>
-
                                     <div class="form-group">
-                                        <label for="exampleInputEmail3">Email</label>
-                                        <input type="email" class="form-control" name="email" placeholder="Email">
+                                        <label for="exampleInputName1">Brand Code</label>
+                                        <input type="text" class="form-control" id="exampleInputName1"
+                                            placeholder="code">
                                     </div>
-
                                     <div class="form-group">
-                                        <label for="exampleInputCity1">Code</label>
-                                        <input type="text" class="form-control" name="code" id="exampleInputCity1"
-                                            placeholder="type code">
-                                    </div>
-
-                                    <div class="form-group">
+                                        <label for="exampleInputName1">Brand logo</label>
                                         <input type="file" name="image" id="" aria-label="Upload" class="mt-2 my-3">
                                     </div>
 
                                     <button type="submit" class="btn btn-success mr-2">Submit</button>
-                                    <button class="btn btn-primary">Cancel</button>
+                                    <button class="btn btn-light">Cancel</button>
                                 </form>
                             </div>
                         </div>
                     </div>
+
                 </div>
                 <!-- content-wrapper ends -->
                 <!-- partial:partials/_footer.html -->
