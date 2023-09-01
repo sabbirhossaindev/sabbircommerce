@@ -94,7 +94,7 @@ a {
                                             <td> <?php echo $rows['user_birthday']; ?> </td>
                                             <td> <?php echo $rows['user_address']; ?> </td>
                                             <td>
-                                                <a href="reg-user-edit.php">
+                                                <a href="reg-user-edit.php?id=<?php echo $rows['id'];?>">
                                                     <span class="btn-edit"> Edit <i class="mdi mdi-pencil text-light">
                                                         </i>
                                                     </span>

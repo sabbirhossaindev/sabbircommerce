@@ -94,7 +94,7 @@ a {
                                             <td> <?php echo $rows['user_textarea'];?></td>
 
                                             <td>
-                                                <a href="user-edit.php">
+                                                <a href="user-edit.php?id=<?php echo $rows['id'];?>">
                                                     <span class="btn-edit"> Edit <i class="mdi mdi-pencil text-light">
                                                         </i>
                                                     </span>
