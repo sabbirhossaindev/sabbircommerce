@@ -35,16 +35,16 @@ include('header.php');
                         <div class="card">
                             <div class="card-body">
                                 <h2 class="text-center text-primary">Add New Brand</h2>
-                                <form class="forms-sample">
+                                <form action="save-brand.php" method="POST" enctype="multipart/form-data">
                                     <div class="form-group">
                                         <label for="exampleInputName1">Brand Name</label>
                                         <input type="text" class="form-control" id="exampleInputName1"
-                                            placeholder="Name">
+                                            placeholder="Name" name="name">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputName1">Brand Code</label>
                                         <input type="text" class="form-control" id="exampleInputName1"
-                                            placeholder="code">
+                                            placeholder="code" name="code">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputName1">Brand logo</label>

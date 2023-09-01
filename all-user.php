@@ -53,46 +53,46 @@ a {
                     include('mainbody-header.php');
                     ?>
                     <!-- Page Title Header Ends overflow-auto-->
-                    <div class="col-lg-12 grid-margin stretch-card overflow-auto">
-                        <div class=" card">
-                            <div class="card-body">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="table-responsive">
                                 <h2 class="text-center my-lg-1"><span class="text-primary"> All
                                         Users</span> <i class="mdi mdi-account-details text-success"></i>
                                 </h2>
-
-                                <table class="table w-full">
+                                <table
+                                    class="table table-striped table-hover table-responsive-sm table-responsive-lg table-responsive-md">
                                     <thead>
                                         <tr>
-                                            <th> STN <i class="mdi mdi-account-circle-outline text-danger"></i>
+                                            <th> USN <i class="mdi mdi-account-circle-outline text-danger"></i>
                                             </th>
                                             <th> User Name <i class="mdi mdi-account text-success"></i></th>
                                             <th> Email <i class="mdi mdi-email-box text-warning"></i></th>
-                                            <th> Ceil <i class="mdi mdi-phone text-success"></i></th>
-                                            <th> Birthday <i class="mdi mdi-calendar-today text-danger"></i></th>
-                                            <th> Address <i class="mdi mdi-map-marker text-success"></i></th>
+                                            <th> Password <i class="mdi mdi-phone text-success"></i></th>
+                                            <th> City <i class="mdi mdi-calendar-today text-danger"></i></th>
+                                            <th> Textarea <i class="mdi mdi-map-marker text-success"></i></th>
                                             <th> Action <i class="mdi mdi-update text-danger"></i></th>
                                         </tr>
                                     </thead>
                                     <tbody class="divide-y">
-                                        <?php 
+                                        <?php
                                             include('db-config.php');
 
                                             if($link == true){
-                                                $query = "SELECT * FROM user_registration";
+                                                $query = "SELECT * FROM add_new_user";
                                                 $sql = mysqli_query($link, $query);
-                                                // var_dump($sql); data check
-                                                if(mysqli_num_rows($sql)> 0){
+                                                // var_dump($sql);
+                                                if(mysqli_num_rows($sql) > 0){
                                                     $serial = 1;
-                                                    while($rows=mysqli_fetch_assoc($sql)){
-                                                        
-                                            ?>
+                                                    while($rows = mysqli_fetch_assoc($sql)){
+                                                ?>
                                         <tr>
-                                            <td> <?php echo $serial++ ?></td>
-                                            <td> <?php echo $rows['user_name']; ?></td>
-                                            <td> <?php echo $rows['user_email']; ?></td>
-                                            <td> <?php echo $rows['user_ceil']; ?> </td>
-                                            <td> <?php echo $rows['user_birthday']; ?> </td>
-                                            <td> <?php echo $rows['user_address']; ?> </td>
+                                            <td> <?php echo $serial++;?></td>
+                                            <td> <?php echo $rows['user_name'];?></td>
+                                            <td> <?php echo $rows['user_email'];?></td>
+                                            <td> <?php echo $rows['user_password'];?></td>
+                                            <td> <?php echo $rows['user_city'];?></td>
+                                            <td> <?php echo $rows['user_textarea'];?></td>
+
                                             <td>
                                                 <a href="user-edit.php">
                                                     <span class="btn-edit"> Edit <i class="mdi mdi-pencil text-light">
@@ -107,14 +107,12 @@ a {
                                                 </a>
                                             </td>
                                         </tr>
-                                        <?php
-
+                                        <?php          
                                             }
-                                                }
-                                                
-                                                else{
-                                                    echo "Data nai";
                                                     }
+                                            }
+                                                else{
+                                                    echo "data pai nai";
                                                 }
                                             ?>
                                     </tbody>

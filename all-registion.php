@@ -52,41 +52,49 @@ a {
                     <?php
                     include('mainbody-header.php');
                     ?>
-
+                    <!-- Page Title Header Ends overflow-auto-->
                     <div class="card">
                         <div class="card-body">
                             <div class="table-responsive">
-                                <h2 class="text-center text-primary">All Brand</h2>
-                                <table class="table table-striped table-hover table-responsive-sm">
+                                <h2 class="text-center my-lg-1"><span class="text-primary">Registration</span> <i
+                                        class="mdi mdi-account-details text-success"></i>
+                                </h2>
+                                <table
+                                    class="table table-striped table-hover table-responsive-sm table-responsive-lg table-responsive-md">
                                     <thead>
                                         <tr>
-                                            <th> BND </th>
-                                            <th> Brand name </th>
-                                            <th> Code </th>
-                                            <th> logo </th>
-                                            <td> Action <i class="mdi mdi-update text-danger"></i></td>
+                                            <th> STN <i class="mdi mdi-account-circle-outline text-danger"></i>
+                                            </th>
+                                            <th> User Name <i class="mdi mdi-account text-success"></i></th>
+                                            <th> Email <i class="mdi mdi-email-box text-warning"></i></th>
+                                            <th> Ceil <i class="mdi mdi-phone text-success"></i></th>
+                                            <th> Birthday <i class="mdi mdi-calendar-today text-danger"></i></th>
+                                            <th> Address <i class="mdi mdi-map-marker text-success"></i></th>
+                                            <th> Action <i class="mdi mdi-update text-danger"></i></th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <?php
+                                    <tbody class="divide-y">
+                                        <?php 
                                             include('db-config.php');
 
                                             if($link == true){
-                                                $query = "SELECT * FROM add_new_brand";
+                                                $query = "SELECT * FROM user_registration";
                                                 $sql = mysqli_query($link, $query);
-                                                // var_dump($sql);
-                                                if(mysqli_num_rows($sql) > 0){
+                                                // var_dump($sql); data check
+                                                if(mysqli_num_rows($sql)> 0){
                                                     $serial = 1;
-                                                    while($rows = mysqli_fetch_assoc($sql)){
-
+                                                    while($rows=mysqli_fetch_assoc($sql)){
+                                                        
                                             ?>
                                         <tr>
-                                            <td><?php echo $serial++;?></td>
-                                            <td> <?php echo $rows['brand_name'];?> </td>
-                                            <td> <?php echo $rows['brand_code'];?> </td>
-                                            <td> <img src="<?php echo $rows['brand_img'];?>" alt="logo"> </td>
+                                            <td> <?php echo $serial++ ?></td>
+                                            <td> <?php echo $rows['user_name']; ?></td>
+                                            <td> <?php echo $rows['user_email']; ?></td>
+                                            <td> <?php echo $rows['user_ceil']; ?> </td>
+                                            <td> <?php echo $rows['user_birthday']; ?> </td>
+                                            <td> <?php echo $rows['user_address']; ?> </td>
                                             <td>
-                                                <a href="edit-brand.php">
+                                                <a href="reg-user-edit.php">
                                                     <span class="btn-edit"> Edit <i class="mdi mdi-pencil text-light">
                                                         </i>
                                                     </span>
@@ -99,22 +107,21 @@ a {
                                                 </a>
                                             </td>
                                         </tr>
-                                        </tr>
                                         <?php
+
                                             }
                                                 }
-                                            }
-                                            else{
-                                                echo "data pai nai";
-                                            }
-                                        ?>
+                                                
+                                                else{
+                                                    echo "Data nai";
+                                                    }
+                                                }
+                                            ?>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
-
-
 
                 </div>
                 <!-- content-wrapper ends -->
@@ -123,7 +130,6 @@ a {
                 include('footer.php');
                 ?>
             </div>
-
             <?php
     }
     else{

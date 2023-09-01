@@ -33,32 +33,33 @@ include('header.php');
                     <div class="col-md-12 grid-margin stretch-card">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Add New User</h4>
-                                <p class="card-description"> Add New User </p>
-                                <form class="forms-sample">
+
+                                <h2 class="text-center text-primary">Add New User</h2>
+                                <form action="user-check.php" method="POST">
                                     <div class="form-group">
                                         <label for="exampleInputName1">Name</label>
                                         <input type="text" class="form-control" id="exampleInputName1"
-                                            placeholder="Name">
+                                            placeholder="Name" name="user_name">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail3">Email address</label>
                                         <input type="email" class="form-control" id="exampleInputEmail3"
-                                            placeholder="Email">
+                                            placeholder="Email" name="user_email">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword4">Password</label>
                                         <input type="password" class="form-control" id="exampleInputPassword4"
-                                            placeholder="Password">
+                                            placeholder="Password" name="user_password">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputCity1">City</label>
                                         <input type="text" class="form-control" id="exampleInputCity1"
-                                            placeholder="Location">
+                                            placeholder="Location" name="user_city">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleTextarea1">Textarea</label>
-                                        <textarea class="form-control" id="exampleTextarea1" rows="2"></textarea>
+                                        <textarea class="form-control" id="exampleTextarea1" rows="2"
+                                            name="user_textarea"></textarea>
                                     </div>
                                     <button type="submit" class="btn btn-success mr-2">Submit</button>
                                     <button class="btn btn-light">Cancel</button>

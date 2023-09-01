@@ -10,6 +10,28 @@
 include('header.php');
 ?>
 
+<style>
+.btn-edit {
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn-delete {
+    cursor: pointer;
+    background-color: crimson;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    margin-left: 5px;
+}
+</style>
 
 <body>
     <div class="container-scroller">
@@ -31,113 +53,65 @@ include('header.php');
                     include('mainbody-header.php');
                     ?>
                     <!-- Page Title Header Ends-->
-                    <div class="col-lg-12 grid-margin stretch-card">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">All Category</h4>
-                                <p class="card-description"> Add class <code>.table-bordered</code> </p>
-                                <table class="table table-bordered">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <h2 class="text-center text-primary">All Categorys</h2>
+                                <table
+                                    class="table table-striped table-hover table-responsive-sm table-responsive-lg table-responsive-md">
                                     <thead>
                                         <tr>
-                                            <th> # </th>
-                                            <th> First name </th>
-                                            <th> Progress </th>
-                                            <th> Amount </th>
-                                            <th> Deadline </th>
+                                            <th> CTA ID </th>
+                                            <th> CTA Name </th>
+                                            <th> Email </th>
+                                            <th> Code </th>
+                                            <th> img </th>
+                                            <th> Action <i class="mdi mdi-update text-danger"></i></th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php
+                                        include('db-config.php');
+
+                                        if($link == true){
+                                            $query = "SELECT * FROM category";
+                                            $sql = mysqli_query($link, $query);
+                                            // var_dump($sql);
+                                            if(mysqli_num_rows($sql) > 0){
+                                                $serial = 1;
+                                                while($rows= mysqli_fetch_assoc($sql)){
+                                            ?>
                                         <tr>
-                                            <td> 1 </td>
-                                            <td> Herman Beck </td>
+                                            <td> <?php echo $serial++;?> </td>
+                                            <td> <?php echo $rows['name'];?> </td>
+                                            <td> <?php echo $rows['cate_email'];?> </td>
+                                            <td> <?php echo $rows['code'];?> </td>
+                                            <td> <img src="<?php echo $rows['image'];?>" alt="cta img"> </td>
                                             <td>
-                                                <div class="progress">
-                                                    <div class="progress-bar bg-success" role="progressbar"
-                                                        style="width: 25%" aria-valuenow="25" aria-valuemin="0"
-                                                        aria-valuemax="100"></div>
-                                                </div>
+                                                <a href="category-edit.php">
+                                                    <span class="btn-edit"> Edit <i class="mdi mdi-pencil text-light">
+                                                        </i>
+                                                    </span>
+                                                </a>
+                                                <a href="#">
+                                                    <span class="btn-delete"> Delete <i
+                                                            class="mdi mdi-delete-circle text-danger text-light">
+                                                        </i>
+                                                    </span>
+                                                </a>
                                             </td>
-                                            <td> $ 77.99 </td>
-                                            <td> May 15, 2015 </td>
                                         </tr>
-                                        <tr>
-                                            <td> 2 </td>
-                                            <td> Messsy Adam </td>
-                                            <td>
-                                                <div class="progress">
-                                                    <div class="progress-bar bg-danger" role="progressbar"
-                                                        style="width: 75%" aria-valuenow="75" aria-valuemin="0"
-                                                        aria-valuemax="100"></div>
-                                                </div>
-                                            </td>
-                                            <td> $245.30 </td>
-                                            <td> July 1, 2015 </td>
-                                        </tr>
-                                        <tr>
-                                            <td> 3 </td>
-                                            <td> John Richards </td>
-                                            <td>
-                                                <div class="progress">
-                                                    <div class="progress-bar bg-warning" role="progressbar"
-                                                        style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-                                                        aria-valuemax="100"></div>
-                                                </div>
-                                            </td>
-                                            <td> $138.00 </td>
-                                            <td> Apr 12, 2015 </td>
-                                        </tr>
-                                        <tr>
-                                            <td> 4 </td>
-                                            <td> Peter Meggik </td>
-                                            <td>
-                                                <div class="progress">
-                                                    <div class="progress-bar bg-primary" role="progressbar"
-                                                        style="width: 50%" aria-valuenow="50" aria-valuemin="0"
-                                                        aria-valuemax="100"></div>
-                                                </div>
-                                            </td>
-                                            <td> $ 77.99 </td>
-                                            <td> May 15, 2015 </td>
-                                        </tr>
-                                        <tr>
-                                            <td> 5 </td>
-                                            <td> Edward </td>
-                                            <td>
-                                                <div class="progress">
-                                                    <div class="progress-bar bg-danger" role="progressbar"
-                                                        style="width: 35%" aria-valuenow="35" aria-valuemin="0"
-                                                        aria-valuemax="100"></div>
-                                                </div>
-                                            </td>
-                                            <td> $ 160.25 </td>
-                                            <td> May 03, 2015 </td>
-                                        </tr>
-                                        <tr>
-                                            <td> 6 </td>
-                                            <td> John Doe </td>
-                                            <td>
-                                                <div class="progress">
-                                                    <div class="progress-bar bg-info" role="progressbar"
-                                                        style="width: 65%" aria-valuenow="65" aria-valuemin="0"
-                                                        aria-valuemax="100"></div>
-                                                </div>
-                                            </td>
-                                            <td> $ 123.21 </td>
-                                            <td> April 05, 2015 </td>
-                                        </tr>
-                                        <tr>
-                                            <td> 7 </td>
-                                            <td> Henry Tom </td>
-                                            <td>
-                                                <div class="progress">
-                                                    <div class="progress-bar bg-warning" role="progressbar"
-                                                        style="width: 20%" aria-valuenow="20" aria-valuemin="0"
-                                                        aria-valuemax="100"></div>
-                                                </div>
-                                            </td>
-                                            <td> $ 150.00 </td>
-                                            <td> June 16, 2015 </td>
-                                        </tr>
+                                        <?php
+                                                    
+                                                    }
+                                                }
+                                                
+                                            }
+                                            else{
+                                                echo "data pai nai";
+                                            }
+                                            
+                                        ?>
                                     </tbody>
                                 </table>
                             </div>

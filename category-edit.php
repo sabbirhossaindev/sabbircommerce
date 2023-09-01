@@ -31,7 +31,7 @@ include('header.php');
                     include('mainbody-header.php');
                     ?>
                     <!-- Page Title Header Ends-->
-                    edit user
+                    edit
                 </div>
                 <!-- content-wrapper ends -->
                 <!-- partial:partials/_footer.html -->

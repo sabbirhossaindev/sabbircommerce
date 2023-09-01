@@ -30,8 +30,12 @@ include('header.php');
                     <?php
                     include('mainbody-header.php');
                     ?>
+
+                    <?php
+                        echo "edit hare";
+                    ?>
                     <!-- Page Title Header Ends-->
-                    edit user
+
                 </div>
                 <!-- content-wrapper ends -->
                 <!-- partial:partials/_footer.html -->

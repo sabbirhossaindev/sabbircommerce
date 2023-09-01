@@ -20,6 +20,13 @@
             </a>
         </li>
 
+        <li class="nav-item">
+            <a class="nav-link" href="all-registion.php">
+                <i class="menu-icon typcn typcn-shopping-bag"></i>
+                <span class="menu-title">Registration</span>
+            </a>
+        </li>
+
 
         <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">

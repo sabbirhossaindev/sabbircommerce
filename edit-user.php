@@ -30,7 +30,6 @@ include('header.php');
                     <?php
                     include('mainbody-header.php');
                     ?>
-                    <!-- Page Title Header Ends-->
                     edit user
                 </div>
                 <!-- content-wrapper ends -->

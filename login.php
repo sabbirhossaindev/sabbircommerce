@@ -75,10 +75,6 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="label">Upload Photo</label>
-                                    <input type="file" name="photo">
-                                </div>
-                                <div class="form-group">
                                     <button class="btn submit btn-primary submit-btn btn-block">Login</button>
                                 </div>
                                 <div class="form-group d-flex justify-content-between">

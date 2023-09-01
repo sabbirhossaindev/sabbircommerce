@@ -1,7 +1,6 @@
 <?php
 
     $name = $_POST['name'];
-    $cate_email = $_POST['email'];
     $code = $_POST['code'];
 
     $imageName = $_FILES['image']['name'];
@@ -12,14 +11,14 @@
 
     if($link == true){
 
-        $query = "INSERT INTO category (name, cate_email, code, image) 
-        VALUES ('$name', '$cate_email', '$code', '$imageName')";
+        $query = "INSERT INTO add_new_brand (brand_name, brand_code, brand_img) 
+        VALUES ('$name', '$code', '$imageName')";
 
         $sql = mysqli_query($link, $query);
     
         if($sql == true){
             move_uploaded_file($tmpName, $upload);
-            header("Location: all-category.php?msg= Category add Done");
+            header("Location: all-brand.php?msg= Brand add Done");
         }
         else{
             echo "sorry some problem data!";
