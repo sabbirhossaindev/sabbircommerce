@@ -23,7 +23,7 @@
         <li class="nav-item">
             <a class="nav-link" href="all-registion.php">
                 <i class="menu-icon typcn typcn-shopping-bag"></i>
-                <span class="menu-title">Registration</span>
+                <span class="menu-title">All Registration</span>
             </a>
         </li>
 

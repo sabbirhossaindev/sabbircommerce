@@ -59,6 +59,13 @@ a {
                                 <h2 class="text-center my-lg-1"><span class="text-primary">Registration</span> <i
                                         class="mdi mdi-account-details text-success"></i>
                                 </h2>
+                                <p class="text-center text-danger">
+                                    <?php
+                                        if(isset($_GET['msg'])){
+                                            echo $_GET['msg'];
+                                        }
+                                    ?>
+                                </p>
                                 <table
                                     class="table table-striped table-hover table-responsive-sm table-responsive-lg table-responsive-md">
                                     <thead>
@@ -99,7 +106,8 @@ a {
                                                         </i>
                                                     </span>
                                                 </a>
-                                                <a href="#">
+                                                <a href="register-delete.php?id=<?php echo $rows['id'];?>"
+                                                    onclick=" return confirm('Are you sure you want to delete.');">
                                                     <span class="btn-delete"> Delete <i
                                                             class="mdi mdi-delete-circle text-danger text-light">
                                                         </i>
