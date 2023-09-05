@@ -84,7 +84,7 @@ a {
                                             <td><?php echo $serial++;?></td>
                                             <td> <?php echo $rows['brand_name'];?> </td>
                                             <td> <?php echo $rows['brand_code'];?> </td>
-                                            <td> <img src="<?php echo $rows['brand_img'];?>" alt="logo"> </td>
+                                            <td> <img src="uploads/<?php echo $rows['brand_img'];?>" alt="logo"> </td>
                                             <td>
                                                 <a href="edit-brand.php?id=<?php echo $rows['id'];?>">
                                                     <span class="btn-edit"> Edit <i class="mdi mdi-pencil text-light">

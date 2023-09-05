@@ -86,7 +86,7 @@ a {
                                             <td> <?php echo $rows['name'];?> </td>
                                             <td> <?php echo $rows['cate_email'];?> </td>
                                             <td> <?php echo $rows['code'];?> </td>
-                                            <td> <img src="<?php echo $rows['image'];?>" alt="cta img"> </td>
+                                            <td> <img src="uploads/<?php echo $rows['image'];?>" alt="cta img"> </td>
                                             <td>
                                                 <a href="category-edit.php?id=<?php echo $rows['id'];?>">
                                                     <span class="btn-edit"> Edit <i class="mdi mdi-pencil text-light">
