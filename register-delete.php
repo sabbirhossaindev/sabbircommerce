@@ -1,6 +1,5 @@
 <?php
     $id = $_GET['id'];
-
     $link = mysqli_connect("localhost","root","","sabbircommerce");
     $query = "DELETE FROM user_registration WHERE id=$id";
     $sql = mysqli_query($link, $query);

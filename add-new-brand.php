@@ -34,7 +34,8 @@ include('header.php');
                     <div class="col-md-12 grid-margin stretch-card">
                         <div class="card">
                             <div class="card-body">
-                                <h2 class="text-center text-primary">Add New Brand</h2>
+                                <h2 class="text-center text-primary">Add New Brand <i
+                                        class="mdi mdi-account-plus text-success"></i></h2>
                                 <form action="save-brand.php" method="POST" enctype="multipart/form-data">
                                     <div class="form-group">
                                         <label for="exampleInputName1">Brand Name</label>

@@ -42,7 +42,7 @@ include('header.php');
                     ?>
 
                     <div>
-                        <h2 class="text-center">Upadate Registion</h2>
+                        <h2 class="text-center text-success">Upadate Registion</h2>
                         <form action="register-update.php?id=<?php echo $row['id'];?>" method="POST">
                             <div class="from-group p-2 mb-2">
                                 <label for="user_name">User Name</label>
@@ -50,27 +50,27 @@ include('header.php');
                                     value="<?php echo $row['user_name'];?>">
                             </div>
                             <div class="from-group p-2 mb-2">
-                                <label for="user_name">User Email</label>
+                                <label for="email">User Email</label>
                                 <input type="email" name="email" class="form-control"
                                     value="<?php echo $row['user_email'];?>">
                             </div>
                             <div class="from-group p-2 mb-2">
-                                <label for="user_name">User Password</label>
+                                <label for="password">User Password</label>
                                 <input type="text" name="password" class="form-control"
                                     value="<?php echo $row['user_password'];?>">
                             </div>
                             <div class="from-group p-2 mb-2">
-                                <label for="user_ceil">phone Number</label>
+                                <label for="ceil">phone Number</label>
                                 <input type="text" name="ceil" class="form-control"
                                     value="<?php echo $row['user_ceil'];?>">
                             </div>
                             <div class="from-group p-2 mb-2">
-                                <label for="user_birthday">Birthday</label>
+                                <label for="birthday">Birthday</label>
                                 <input type="date" name="birthday" class="form-control"
                                     value="<?php echo $row['user_birthday'];?>">
                             </div>
                             <div class="from-group p-2 mb-2">
-                                <label for="user_address">User Address</label>
+                                <label for="address">User Address</label>
                                 <input type="text" name="address" class="form-control"
                                     value="<?php echo $row['user_address'];?>">
                             </div>

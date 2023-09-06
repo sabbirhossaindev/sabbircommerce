@@ -57,6 +57,13 @@ a {
                         <div class="card-body">
                             <div class="table-responsive">
                                 <h2 class="text-center text-primary">All Brand</h2>
+                                <p class="text-center text-danger">
+                                    <?php
+                                        if(isset($_GET['msg'])){
+                                            echo $_GET['msg'];
+                                        }
+                                    ?>
+                                </p>
                                 <table class="table table-striped table-hover table-responsive-sm">
                                     <thead>
                                         <tr>
@@ -86,12 +93,13 @@ a {
                                             <td> <?php echo $rows['brand_code'];?> </td>
                                             <td> <img src="uploads/<?php echo $rows['brand_img'];?>" alt="logo"> </td>
                                             <td>
-                                                <a href="edit-brand.php?id=<?php echo $rows['id'];?>">
+                                                <a href="brand-edit.php?id=<?php echo $rows['id'];?>">
                                                     <span class="btn-edit"> Edit <i class="mdi mdi-pencil text-light">
                                                         </i>
                                                     </span>
                                                 </a>
-                                                <a href="#">
+                                                <a href="brand-delete.php?id=<?php echo $rows['id']?>"
+                                                    onclick=" return confirm('<?php echo $rows['brand_name'];?> Are you want to Delete')">
                                                     <span class="btn-delete"> Delete <i
                                                             class="mdi mdi-delete-circle text-danger text-light">
                                                         </i>

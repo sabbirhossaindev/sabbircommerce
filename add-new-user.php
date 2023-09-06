@@ -34,7 +34,8 @@ include('header.php');
                         <div class="card">
                             <div class="card-body">
 
-                                <h2 class="text-center text-primary">Add New User</h2>
+                                <h2 class="text-center text-primary">Add New User <i
+                                        class="mdi mdi-account-plus text-success"></i></h2>
                                 <form action="user-check.php" method="POST">
                                     <div class="form-group">
                                         <label for="exampleInputName1">Name</label>

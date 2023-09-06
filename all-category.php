@@ -56,7 +56,16 @@ a {
                     <div class="card">
                         <div class="card-body">
                             <div class="table-responsive">
-                                <h2 class="text-center text-primary">All Categorys</h2>
+                                <h2 class="text-center text-primary">All Categorys <i
+                                        class="mdi mdi-account-plus text-success"></i>
+                                </h2>
+                                <p class="text-center text-danger">
+                                    <?php
+                                            if(isset($_GET['msg'])){
+                                                echo $_GET['msg'];
+                                            }
+                                        ?>
+                                </p>
                                 <table
                                     class="table table-striped table-hover table-responsive-sm table-responsive-lg table-responsive-md">
                                     <thead>
@@ -93,7 +102,8 @@ a {
                                                         </i>
                                                     </span>
                                                 </a>
-                                                <a href="#">
+                                                <a href="category-delete.php?id=<?php echo $rows['id']?>"
+                                                    onclick=" return confirm('<?php echo $rows['name'];?> Are you sure want to Delete')">
                                                     <span class="btn-delete"> Delete <i
                                                             class="mdi mdi-delete-circle text-danger text-light">
                                                         </i>
