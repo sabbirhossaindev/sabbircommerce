@@ -34,7 +34,7 @@ include('header.php');
                     <?php
                         $id = $_GET['id'];
                         $link = mysqli_connect("localhost", "root", "", "sabbircommerce");
-                        $query = "SELECT * FROM user_registration WHERE id = $id";
+                        $query = "SELECT * FROM add_new_user WHERE id = $id";
 
                         $result = mysqli_query($link, $query);
                         $row = mysqli_fetch_assoc($result);
