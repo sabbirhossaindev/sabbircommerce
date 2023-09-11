@@ -1,43 +1,8 @@
 <?php
 
-$username = $_POST['username'];
-$email = $_POST['email'];
-$password = $_POST['password'];
-$ceil = $_POST['ceil'];
-$birthday = $_POST['birthday'];
-$address = $_POST['address'];
-$message = $_POST['message'];
-$otpcode = rand(100, 1000);
+    use PHPMailer\PHPMailer\PHPMailer; 
 
-include('db-config.php');
-
-if($link == true){
-
-    $query = "INSERT INTO user_registration (user_name,user_email,user_password,user_ceil,	user_birthday,user_address,message, otpcode) 
-    VALUES ('$username', '$email', '$password', '$ceil', '$birthday', '$address', '$message', $otpcode)";
-    
-    $sql = mysqli_query($link, $query);
-
-    if($sql == true){
-        // header("Location: login.php?msg= $username registration successfully");
-        echo "<h1>registration successfully</h1>";
-    }
-    else{
-        echo "$username sorry some problem data!";
-    }
-} 
-else{
-    echo"Sorry, some problem hare!";
-}
-
-// Email Verification Start
-
-use PHPMailer\PHPMailer\PHPMailer; 
-
-use PHPMailer\PHPMailer\Exception;
-
-   
- 
+    use PHPMailer\PHPMailer\Exception;
 
         require 'PHPMailer/src/Exception.php';
 
@@ -57,9 +22,9 @@ use PHPMailer\PHPMailer\Exception;
 
             $mail->SMTPAuth = true;  // enable smtp authentication                             
 
-            $mail->Username = 'mdsabbir477470@gmail.com';  // sender gmail host              
+            $mail->Username = 'jannat.mamurjor@gmail.com';  // sender gmail host              
 
-            $mail->Password = 'sabbir1922'; // sender gmail host password   
+            $mail->Password = 'ihztsijwheggbfmy'; // sender gmail host password   
             
 
 
@@ -69,9 +34,9 @@ use PHPMailer\PHPMailer\Exception;
 
             $mail->isHTML(true); 
 
-            $mail->setFrom('mdsabbir477470@gmail.com', "sabbircommerce"); // sender's email and name
+            $mail->setFrom('monlinebatch@gmail.com', "Sender"); // sender's email and name
 
-            $mail->addAddress($email, "Sabbir Hossin Dev");  // receiver's email and name
+            $mail->addAddress("mdsabbir477470@gmail.com", "codemanbd");  // receiver's email and name
 
             $headers = 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; 
 
@@ -91,7 +56,6 @@ use PHPMailer\PHPMailer\Exception;
     /* -------------------------------------
           GLOBAL RESETS
       ------------------------------------- */
-
     img {
         border: none;
         -ms-interpolation-mode: bicubic;
@@ -264,7 +228,6 @@ use PHPMailer\PHPMailer\Exception;
 
     .btn-primary table td {
         background-color: #3498db;
-
     }
 
     .btn-primary a {
@@ -329,18 +292,6 @@ use PHPMailer\PHPMailer\Exception;
         border: 0;
         border-bottom: 1px solid #f6f6f6;
         Margin: 20px 0;
-    }
-
-    .away {
-        text-align: center;
-    }
-
-    .confirm a {
-        align-items: center;
-    }
-
-    .fb {
-        justify-content: center;
     }
 
     /* -------------------------------------
@@ -421,8 +372,6 @@ use PHPMailer\PHPMailer\Exception;
 
         .btn-primary table td:hover {
             background-color: #34495e !important;
-            align-items: center !important;
-            justify-content: center !important;
         }
 
         .btn-primary a:hover {
@@ -449,20 +398,15 @@ use PHPMailer\PHPMailer\Exception;
                                     <tr>
                                         <td>
                                             <h1>Confirm your email</h1>
-                                            <h2 class="away">You are just one step away</h2>
+                                            <h2>You are just one step away</h2>
                                             <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
                                                 <tbody>
                                                     <tr>
-                                                        <td align="center">
+                                                        <td align="left">
                                                             <table border="0" cellpadding="0" cellspacing="0">
                                                                 <tbody>
                                                                     <tr>
-                                                                        <td class="confirm">
-                                                                            <a href=http://localhost/cmbd/verify.php?otpcode='<?php echo  $otpcode;?>'
-                                                                                target="_blank">confirm email
-                                                                                <?php echo  $otpcode;?>
-                                                                            </a>
-                                                                        </td>
+                                                                        <!-- <td> <a href=http://localhost/verification/verify.php?code='<?php echo  $code;?>' target="_blank">confirm email</a> </td> -->
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
@@ -471,8 +415,7 @@ use PHPMailer\PHPMailer\Exception;
                                                 </tbody>
                                             </table>
                                             <p> আপনি কোন কিছু বুজতে না পারলে কমেন্ট করতে পারেন বা আমার ফেসবুক আইডিতে নক
-                                                দিতে পারেন । <br><a href="https://www.facebook.com/sabbirhossaindev/"
-                                                    class="fb">facebook</a></p>
+                                                দিতে পারেন । fb/hadijaman</p>
 
                                         </td>
                                     </tr>
@@ -490,7 +433,7 @@ use PHPMailer\PHPMailer\Exception;
         </tr>
         <tr>
             <td class="content-block powered-by">
-                Powered by <a href="https://dev-sabbir.web.app/">Sabbir Hossain Dev</a>
+                Powered by <a href="https://www.codemanbd.com/">Code Man BD</a>.
             </td>
         </tr>
     </table>
@@ -508,22 +451,17 @@ use PHPMailer\PHPMailer\Exception;
 </html>
 
 <?php
-    $contents = ob_get_contents(); 
-    $mail->Body    =  $contents; 
+          $contents = ob_get_contents(); 
+              $mail->Body    =  $contents; 
 
-    $mail->send();
+            $mail->send();
 
-        echo 'Message has been sent';
+            echo 'Message has been sent';
 
-    } catch (Exception $e) { // handle error.
+        } catch (Exception $e) { // handle error.
 
-        echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+            echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
 
-    }
-
-
-
-//Email Verification End
-
+        }
 
 ?>
