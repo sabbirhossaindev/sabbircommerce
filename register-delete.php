@@ -10,5 +10,4 @@
     } else{
         header("Location: all-registion.php?msg= Delete Not Done!");
     }
-
  ?>
