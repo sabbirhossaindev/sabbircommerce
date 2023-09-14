@@ -20,7 +20,7 @@ if($link == true){
 
     if($sql == true){
         // header("Location: login.php?msg= $username registration successfully");
-        echo "<h1>registration successfully</h1>";
+        echo '<h3 class="text-success text-center">registration successfully</h3>';
     }
     else{
         echo "$username sorry some problem data!";
@@ -86,7 +86,7 @@ use PHPMailer\PHPMailer\Exception;
 <head>
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Mamurjor IT </title>
+    <title>Sabbircommerce </title>
     <style>
     /* -------------------------------------
           GLOBAL RESETS
@@ -476,6 +476,77 @@ use PHPMailer\PHPMailer\Exception;
 
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <td>
+                                            <footer class="footer">
+                                                <!-- Remove the container if you want to extend the Footer to full width. -->
+                                                <div class="">
+                                                    <!-- Footer -->
+                                                    <footer class="text-center text-lg-start text-dark"
+                                                        style="background-color: #ECEFF1">
+                                                        <section class="p-3">
+                                                            <div class="container text-center text-md-start mt-5">
+                                                                <!-- Grid row -->
+                                                                <div class="row mt-3">
+                                                                    <!-- Grid column -->
+                                                                    <div
+                                                                        class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                                                                        <!-- Content -->
+                                                                        <h6 class="text-uppercase fw-bold">Service</h6>
+                                                                        <p>
+                                                                            - Web Designer & Developer 🥰 <br>
+                                                                            - PHP Laravel & DBMS Developer 💗 <br>
+                                                                            - WordPress WIX & Shopify Developer🤙
+                                                                        </p>
+                                                                    </div>
+                                                                    <!-- Grid column -->
+
+                                                                    <!-- Grid column -->
+
+                                                                    <!-- Grid column -->
+                                                                    <div
+                                                                        class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                                                                        <!-- Links -->
+                                                                        <h6 class="text-uppercase fw-bold">Contact</h6>
+                                                                        <p><i
+                                                                                class="mdi mdi-map-marker text-success"></i>
+                                                                            Rangpur, Dhaka</p>
+                                                                        <p><i
+                                                                                class="mdi mdi-email-outline mr-1 text-warning"></i>mdsabbir477470@gmail.com
+                                                                        </p>
+                                                                        <p><i
+                                                                                class="mdi mdi-phone mr-1 text-danger"></i>
+                                                                            +880188855-9287</p>
+                                                                        <p><i
+                                                                                class="mdi mdi-printer mr-1 text-primary"></i>
+                                                                            +880171922-8487</p>
+                                                                    </div>
+                                                                    <!-- Grid column -->
+                                                                </div>
+                                                                <!-- Grid row -->
+                                                            </div>
+                                                        </section>
+                                                        <!-- Section: Links  -->
+
+                                                        <!-- Copyright -->
+                                                        <div class="text-center p-3"
+                                                            style="background-color: rgba(0, 0, 0, 0.2)">
+                                                            <span class="text-center text-success">copyright
+                                                                ©
+                                                                2019-<?php echo date("Y");?> Powered by <a
+                                                                    href="https://dev-sabbir.web.app/">Sabbir Hossain
+                                                                    Dev</a> All
+                                                                rights reserved.
+                                                            </span>
+                                                        </div>
+                                                        <!-- Copyright -->
+                                                    </footer>
+                                                    <!-- Footer -->
+                                                </div>
+                                                <!-- End of .container -->
+                                            </footer>
+                                        </td>
+                                    </tr>
                                 </table>
                             </td>
                         </tr>
@@ -487,11 +558,6 @@ use PHPMailer\PHPMailer\Exception;
                     <div class="footer">
                         <table border="0" cellpadding="0" cellspacing="0">
 
-        </tr>
-        <tr>
-            <td class="content-block powered-by">
-                Powered by <a href="https://dev-sabbir.web.app/">Sabbir Hossain Dev</a>
-            </td>
         </tr>
     </table>
     </div>
