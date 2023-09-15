@@ -1,16 +1,18 @@
 <?php
 session_start();
 
-$username = $_POST['username'];
-$email = $_POST['email'];
-$password = $_POST['password'];
+$username = $_POST['user_name'];
+$email = $_POST['user_email'];
+$password = $_POST['user_password'];
 
-// upload file......
-// var_dump($_FILES['photo']); // check data 
+$link = mysqli_connect("localhost", "root", "", "sabbircommerce");
 
-if($username == "sabbir hossain" && $password == "12345678"){
-    $_SESSION['username'] = $username;
-    $_SESSION['email'] = $email;
+$query = "SELECT * FROM user_registration WHERE  user_name='$username' && user_email='$email' && user_password='$password'";
+
+$result = mysqli_query($link, $query);
+
+if(mysqli_num_rows($result)>0){
+    $_SESSION['user_name'] = $username;
     header("Location: dashboard.php");
 }
 else{

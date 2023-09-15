@@ -59,7 +59,7 @@ use PHPMailer\PHPMailer\Exception;
 
             $mail->Username = 'mdsabbir477470@gmail.com';  // sender gmail host              
 
-            $mail->Password = 'sabbir1922'; // sender gmail host password   
+            $mail->Password = 'bfsuyhwrsdlcnnwp'; // sender gmail host password   
             
 
 
@@ -343,6 +343,10 @@ use PHPMailer\PHPMailer\Exception;
         justify-content: center;
     }
 
+    .text-success {
+        color: green;
+    }
+
     /* -------------------------------------
           RESPONSIVE AND MOBILE FRIENDLY STYLES
       ------------------------------------- */
@@ -448,7 +452,7 @@ use PHPMailer\PHPMailer\Exception;
                                 <table border="0" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td>
-                                            <h1>Confirm your email</h1>
+                                            <h1 class="text-success">Confirm your email</h1>
                                             <h2 class="away">You are just one step away</h2>
                                             <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
                                                 <tbody>
@@ -458,7 +462,7 @@ use PHPMailer\PHPMailer\Exception;
                                                                 <tbody>
                                                                     <tr>
                                                                         <td class="confirm">
-                                                                            <a href=http://localhost/cmbd/verify.php?otpcode='<?php echo  $otpcode;?>'
+                                                                            <a href=http://localhost/cmbd/sabbircommerce/verify.php?otpcode=<?php echo  $otpcode;?>
                                                                                 target="_blank">confirm email
                                                                                 <?php echo  $otpcode;?>
                                                                             </a>
@@ -478,7 +482,7 @@ use PHPMailer\PHPMailer\Exception;
                                     </tr>
                                     <tr>
                                         <td>
-                                            <footer class="footer">
+                                            <footer class="footer my-3">
                                                 <!-- Remove the container if you want to extend the Footer to full width. -->
                                                 <div class="">
                                                     <!-- Footer -->
@@ -529,8 +533,7 @@ use PHPMailer\PHPMailer\Exception;
                                                         <!-- Section: Links  -->
 
                                                         <!-- Copyright -->
-                                                        <div class="text-center p-3"
-                                                            style="background-color: rgba(0, 0, 0, 0.2)">
+                                                        <div class="text-center p-3">
                                                             <span class="text-center text-success">copyright
                                                                 ©
                                                                 2019-<?php echo date("Y");?> Powered by <a
