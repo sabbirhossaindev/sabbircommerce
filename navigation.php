@@ -145,7 +145,7 @@
                                         echo $_SESSION['username'];
                                     }
                                 ?></p>
-                        <p class="font-weight-light text-muted mb-0"><?php echo $_SESSION['email']?></p>
+                        <p class="font-weight-light text-muted mb-0"><?php echo $_SESSION['user_email']?></p>
                     </div>
                     <a class="dropdown-item">My Profile <span class="badge badge-pill badge-danger">1</span><i
                             class="dropdown-item-icon ti-dashboard"></i></a>

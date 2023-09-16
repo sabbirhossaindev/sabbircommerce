@@ -1,4 +1,7 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer; 
+
+use PHPMailer\PHPMailer\Exception;
 
 $username = $_POST['username'];
 $email = $_POST['email'];
@@ -10,6 +13,20 @@ $message = $_POST['message'];
 $otpcode = rand(100, 1000);
 
 include('db-config.php');
+
+// username unique check start
+$query = "SELECT * FROM user_registration WHERE  user_name='$username' && user_email='$email'";
+
+$result = mysqli_query($link, $query);
+
+if(mysqli_num_rows($result)>0){
+    $_SESSION['username'] = $username;
+    $_SESSION['email'] = $email;
+    header("Location: register.php?msg=username must be unique");
+}
+else{
+    
+
 
 if($link == true){
 
@@ -32,53 +49,46 @@ else{
 
 // Email Verification Start
 
-use PHPMailer\PHPMailer\PHPMailer; 
+    require 'PHPMailer/src/Exception.php';
 
-use PHPMailer\PHPMailer\Exception;
+    require 'PHPMailer/src/PHPMailer.php';
 
-   
- 
+    require 'PHPMailer/src/SMTP.php';
 
-        require 'PHPMailer/src/Exception.php';
+    // create object of PHPMailer class with boolean parameter which sets/unsets exception.
 
-        require 'PHPMailer/src/PHPMailer.php';
+    $mail = new PHPMailer(true);                              
 
-        require 'PHPMailer/src/SMTP.php';
+    try {
 
-        // create object of PHPMailer class with boolean parameter which sets/unsets exception.
+        $mail->isSMTP(); // using SMTP protocol                                     
 
-        $mail = new PHPMailer(true);                              
+        $mail->Host = 'ssl://smtp.gmail.com'; // SMTP host as gmail 
 
-        try {
+        $mail->SMTPAuth = true;  // enable smtp authentication                             
 
-            $mail->isSMTP(); // using SMTP protocol                                     
+        $mail->Username = 'mdsabbir477470@gmail.com';  // sender gmail host              
 
-            $mail->Host = 'ssl://smtp.gmail.com'; // SMTP host as gmail 
-
-            $mail->SMTPAuth = true;  // enable smtp authentication                             
-
-            $mail->Username = 'mdsabbir477470@gmail.com';  // sender gmail host              
-
-            $mail->Password = 'bfsuyhwrsdlcnnwp'; // sender gmail host password   
+        $mail->Password = 'bfsuyhwrsdlcnnwp'; // sender gmail host password   
             
 
 
-            $mail->SMTPSecure = 'tls';  // for encrypted connection                           
+        $mail->SMTPSecure = 'tls';  // for encrypted connection                           
 
-            $mail->Port = 465;   // port for SMTP     
+        $mail->Port = 465;   // port for SMTP     
 
-            $mail->isHTML(true); 
+        $mail->isHTML(true); 
 
-            $mail->setFrom('mdsabbir477470@gmail.com', "sabbircommerce"); // sender's email and name
+        $mail->setFrom('mdsabbir477470@gmail.com', "sabbircommerce"); // sender's email and name
 
-            $mail->addAddress($email, "Sabbir Hossin Dev");  // receiver's email and name
+        $mail->addAddress($email, "Sabbir Hossin Dev");  // receiver's email and name
 
-            $headers = 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; 
+        $headers = 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; 
 
-            $mail->Subject = 'Be Come a php Developer';
+        $mail->Subject = 'Be Come a php Developer';
 
-            ob_start(); 
-            ?>
+        ob_start(); 
+    ?>
 
 <!doctype html>
 <html>
@@ -593,6 +603,8 @@ use PHPMailer\PHPMailer\Exception;
 
 
 //Email Verification End
+}
+// username unique check end
 
 
 ?>

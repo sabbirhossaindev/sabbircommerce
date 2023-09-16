@@ -31,6 +31,13 @@
                 <div class="row w-100">
                     <div class="col-lg-4 mx-auto">
                         <h2 class="text-center mb-4">Register 🥰</h2>
+                        <p style="color: green;" class="text-center mb-4">
+                            <?php 
+                                if(isset($_GET['msg'])){
+                                    echo $_GET['msg'];
+                                }
+                            ?>
+                        </p>
                         <div class="auto-form-wrapper">
                             <form action="register-check.php" method="POST">
                                 <div class="form-group">
