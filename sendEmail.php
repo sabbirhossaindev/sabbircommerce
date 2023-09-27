@@ -40,7 +40,7 @@
 
             $headers = 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; 
 
-            $mail->Subject = 'Be Come a php Developer';
+            $mail->Subject = 'Sabbircommerce';
 
             ob_start(); 
             ?>
@@ -51,7 +51,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Mamurjor IT </title>
+    <title>sabbircommerce</title>
     <style>
     /* -------------------------------------
           GLOBAL RESETS

@@ -85,7 +85,7 @@ else{
 
         $headers = 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; 
 
-        $mail->Subject = 'Be Come a php Developer';
+        $mail->Subject = 'sabbircommerce';
 
         ob_start(); 
     ?>
